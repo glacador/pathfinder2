@@ -286,6 +286,119 @@ body {
   background: var(--fill-quaternary);
 }
 
+/* === GLASS BUTTON (Apple Liquid Glass Style) === */
+.glass-button-component {
+  position: relative;
+  color: var(--label-primary);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    inset 0 -4px 12px rgba(0, 0, 0, 0.06),
+    inset 0 4px 12px rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button-component::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 100px;
+  background: linear-gradient(
+    180deg,
+    rgba(180, 180, 190, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+.glass-button-component::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom-color: rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+}
+
+.glass-button-component:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 4px 16px rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  transform: scale(1.02);
+}
+
+.glass-button-component:active {
+  transform: translateY(2px) scale(0.98);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0.85) 100%
+  );
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    0 1px 4px rgba(0, 0, 0, 0.08),
+    inset 0 2px 8px rgba(0, 0, 0, 0.08),
+    inset 0 -2px 8px rgba(255, 255, 255, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+/* Dark mode glass button */
+[data-theme="dark"] .glass-button-component {
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 67, 0.6) 0%,
+    rgba(60, 60, 67, 0.4) 50%,
+    rgba(60, 60, 67, 0.3) 100%
+  );
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 -4px 12px rgba(0, 0, 0, 0.2),
+    inset 0 4px 12px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .glass-button-component {
+    background: linear-gradient(
+      180deg,
+      rgba(60, 60, 67, 0.6) 0%,
+      rgba(60, 60, 67, 0.4) 50%,
+      rgba(60, 60, 67, 0.3) 100%
+    );
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 2px 8px rgba(0, 0, 0, 0.2),
+      inset 0 -4px 12px rgba(0, 0, 0, 0.2),
+      inset 0 4px 12px rgba(255, 255, 255, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
 /* === CARD STYLES === */
 .card {
   background: var(--bg-primary);
