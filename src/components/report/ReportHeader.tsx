@@ -87,7 +87,7 @@ export default function ReportHeader({
             )}
             {onDownload && (
               <Button
-                variant="primary"
+                variant="glass"
                 size="sm"
                 onClick={onDownload}
                 leftIcon={<Download className="w-4 h-4" />}

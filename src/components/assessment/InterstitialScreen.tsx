@@ -131,7 +131,7 @@ export default function InterstitialScreen({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <Button onClick={onContinue} size="lg">
+          <Button variant="glass" onClick={onContinue} size="lg">
             {progress === 100 ? 'See My Results' : 'Continue'}
           </Button>
         </motion.div>

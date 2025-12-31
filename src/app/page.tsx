@@ -132,6 +132,7 @@ export default function LandingPage() {
                 transition={{ delay: 0.4 }}
               >
                 <Button
+                  variant="glass"
                   onClick={() => setShowForm(true)}
                   size="lg"
                   rightIcon={<ChevronRight className="w-5 h-5" />}
@@ -179,6 +180,7 @@ export default function LandingPage() {
                     />
                   </div>
                   <Button
+                    variant="glass"
                     type="submit"
                     className="w-full"
                     rightIcon={<ChevronRight className="w-5 h-5" />}
@@ -312,6 +314,7 @@ export default function LandingPage() {
               using PathFinder
             </p>
             <Button
+              variant="glass"
               onClick={() => setShowForm(true)}
               size="lg"
               rightIcon={<ChevronRight className="w-5 h-5" />}

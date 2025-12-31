@@ -147,21 +147,12 @@ export default function TierSelector({
               ))}
             </ul>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <button
               onClick={() => onSelectTier(tier.id)}
-              className={`
-                w-full py-3.5 rounded-xl font-semibold transition-colors
-                ${
-                  tier.popular
-                    ? 'bg-[var(--color-primary)] text-white hover:bg-[#0066d6]'
-                    : 'bg-[var(--fill-tertiary)] text-[var(--label-primary)] hover:bg-[var(--fill-secondary)]'
-                }
-              `}
+              className="w-full py-3.5 font-semibold glass-button-component"
             >
               {tier.cta}
-            </motion.button>
+            </button>
           </motion.div>
         );
       })}

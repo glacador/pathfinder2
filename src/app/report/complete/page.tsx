@@ -423,7 +423,7 @@ export default function CompleteReportPage() {
               Upgrade to Professional Accelerator for resume templates, interview prep,
               salary negotiation scripts, and networking outreach templates.
             </p>
-            <Button onClick={() => router.push('/checkout?tier=professional')}>
+            <Button variant="glass" onClick={() => router.push('/checkout?tier=professional')}>
               Upgrade to Professional ($99.99)
             </Button>
           </Card>

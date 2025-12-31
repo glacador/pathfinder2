@@ -210,7 +210,7 @@ export default function TimedTask({ question, onComplete }: TimedTaskProps) {
         <p className="text-[var(--label-secondary)] mb-6">
           You have {question.timeLimit} seconds. Complete as many as you can!
         </p>
-        <Button onClick={() => setIsStarted(true)} size="lg">
+        <Button variant="glass" onClick={() => setIsStarted(true)} size="lg">
           Start Task
         </Button>
       </motion.div>

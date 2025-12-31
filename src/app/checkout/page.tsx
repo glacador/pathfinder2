@@ -324,6 +324,7 @@ function CheckoutContent() {
 
                 {/* Submit */}
                 <Button
+                  variant="glass"
                   type="submit"
                   className="w-full"
                   size="lg"

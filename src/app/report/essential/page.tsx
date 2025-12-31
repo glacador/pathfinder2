@@ -389,7 +389,7 @@ export default function EssentialReportPage() {
               Upgrade to Complete Roadmap for salary data, education paths, skills gap
               analysis, and a 90-day action plan.
             </p>
-            <Button onClick={() => router.push('/checkout?tier=complete')}>
+            <Button variant="glass" onClick={() => router.push('/checkout?tier=complete')}>
               Upgrade to Complete ($59.99)
             </Button>
           </Card>
